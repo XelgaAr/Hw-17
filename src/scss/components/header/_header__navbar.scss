@@ -2,7 +2,7 @@
 
 .header__navbar {
   &-list {
-    @include unlist;
+    @include unlist(0 (-$gap-sm) 0 0);
     display: grid;
     justify-content: end;
     grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
@@ -14,6 +14,7 @@
     padding: $gap $gap-sm;
     letter-spacing: 0.085em;
     transition: color 0.3s;
+    font-size: 1.125rem;
     &::after,
     &:focus {
       color: $color-accent;
