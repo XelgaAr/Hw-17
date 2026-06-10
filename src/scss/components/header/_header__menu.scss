@@ -1,6 +1,10 @@
 @use "../../abstracts" as *;
 .header__menu {
   z-index: 2;
+  @include md {
+    @include box-shadow;
+    background-color: rgba($color-gray-dark, 0.25);
+  }
   @include position($top: 0, $right: 0, $left: 0);
   padding: $gap 0;
   &-container {
