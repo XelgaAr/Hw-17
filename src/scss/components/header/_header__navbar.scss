@@ -2,23 +2,27 @@
 
 .header__navbar {
   &-list {
-    @include unlist(0 (-$gap-sm) 0 0);
     display: grid;
-    justify-content: end;
-    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
     gap: $gap;
+    justify-content: end;
 
+    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+    @include unlist(0 (-$gap-sm) 0 0);
     @include lg {
-      display: none;
       position: absolute;
       top: 100%;
       right: $gap;
-      width: 170px;
-      background-color: rgba($color-primary, 0.7);
-      grid-template-columns: 1fr;
+
+      display: none;
       gap: 0;
+
+      width: 170px;
       padding: $gap-sm 0;
+
+      background-color: rgba($color-primary, 0.7);
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+      grid-template-columns: 1fr;
     }
   }
   &-item {
@@ -28,42 +32,53 @@
   }
   &-link {
     padding: $gap $gap-sm;
-    letter-spacing: 0.085em;
+
     transition: color 0.3s;
+    letter-spacing: 0.085em;
+
     font-size: 1.125rem;
-    &:hover,
-    &:focus {
-      color: $color-accent;
-    }
 
     @include lg {
       display: block;
-      text-align: center;
+
       padding: 10px 24px;
+
+      text-align: center;
+    }
+    &:hover,
+    &:focus {
+      color: $color-accent;
     }
   }
   &-btn {
     display: none;
 
     @include lg {
+      z-index: 3;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       width: 30px;
       height: 18px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
       margin-left: auto;
-      z-index: 3;
+
+      cursor: pointer;
+
+      border: none;
+      background: transparent;
 
       &-row {
         display: block;
+
         width: 100%;
         height: 2px;
-        background-color: $color-white;
-        border-radius: 1px;
+
         transition: all 0.3s ease-in-out;
+
+        border-radius: 1px;
+        background-color: $color-white;
       }
 
       &:hover &-row {
@@ -76,8 +91,9 @@
             transform: translateY(8px) rotate(45deg);
           }
           &:nth-child(2) {
-            opacity: 0;
             transform: scale(0);
+
+            opacity: 0;
           }
           &:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);

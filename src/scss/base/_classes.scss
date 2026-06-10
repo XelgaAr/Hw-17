@@ -4,23 +4,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 0.5em 1em;
 
+  transition: background-color 0.3s;
   letter-spacing: 0.1em;
+
   border-width: 2px;
   border-style: solid;
-
-  transition: background-color 0.3s;
   &:hover,
   &:focus {
     background-color: $color-accent;
   }
   &--light {
-    background-color: rgba($color-white, 0.1);
     border-color: $color-white;
+    background-color: rgba($color-white, 0.1);
+
     @include lg-min {
       min-width: 250px;
       min-height: 60px;
+
       font-size: 1.125rem;
     }
     @include lg-md {
@@ -34,6 +37,7 @@
   }
   &--primary {
     border-color: $color-white;
+
     font-size: 1.125rem;
   }
 }
