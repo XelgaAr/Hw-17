@@ -13,6 +13,7 @@ $local-height: 200px;
   &__title {
   }
   &__container {
+    margin-bottom: $gap;
     grid-auto-rows: minmax($local-height, calc(33.3333333333vh - $Local-gap));
     display: grid;
     grid-template-areas:
@@ -51,5 +52,10 @@ $local-height: 200px;
     }
   }
   &__actions {
+    display: flex;
+    justify-content: center;
+    @include sm-min {
+      margin-bottom: $gap-lg;
+    }
   }
 }
