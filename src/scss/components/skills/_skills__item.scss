@@ -1,18 +1,56 @@
 @use "../../abstracts" as *;
 
 .skills__item {
+  overflow: hidden;
   position: relative;
-  min-height: 33vh;
   &-title {
+    z-index: 1;
+    margin: 0;
+    @include abs-position;
+    letter-spacing: 0.1em;
+    font-family: $font-main;
+
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md {
+      font-size: 1.125rem;
+    }
   }
   &-link {
+    transform: color 0.3s;
+    padding: $gap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
+
   &-image {
+    transition: scale 0.3s;
+    background-color: $color-primary;
+    background-size: cover;
+    background-position: center;
     @include abs-position;
   }
   &-overlay {
+    transition: opacity 0.3s;
+    background-color: $color-primary;
+    opacity: 0.85;
+    @include abs-position;
   }
-
+  &:hover {
+    .skills__item-overlay {
+      opacity: 0.95;
+    }
+    .skills__item-link {
+      color: $color-accent;
+    }
+    .skills__item-image {
+      scale: 1.1;
+      color: $color-accent;
+    }
+  }
   @for $i from 1 through 9 {
     &:nth-child(#{$i}) {
       grid-area: a#{$i};
