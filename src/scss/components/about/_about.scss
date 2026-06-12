@@ -4,72 +4,88 @@
   background-color: $color-gray-light2;
 
   &__container {
-    @extend %container;
     display: flex;
     align-items: flex-start;
+
     padding-top: $gap-x3;
     padding-bottom: $gap-x2;
 
+    @extend %container;
     @include md {
       flex-wrap: wrap;
     }
     @include sm {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
   }
   &__content {
     flex: 1;
+
     min-width: 0;
+
     @include sm-min {
       padding-right: $gap-x2;
     }
   }
   &__title {
+    margin-top: 0;
+
     color: $color-primary;
+
     font-family: $font-header;
     font-weight: 700;
     line-height: 1.2;
-    margin-top: 0;
 
     @include lg-min {
-      font-size: 2.25rem;
       margin-bottom: $gap-lg;
+
+      font-size: 2.25rem;
     }
     @include lg-md {
-      font-size: 2rem;
       margin-bottom: $gap;
+
+      font-size: 2rem;
     }
     @include md-sm {
-      font-size: 1.75rem;
       margin-bottom: $gap;
+
+      font-size: 1.75rem;
     }
     @include sm {
-      font-size: 1.75rem;
       margin-bottom: $gap;
+
       text-align: center;
+
+      font-size: 1.75rem;
     }
   }
   &__text {
-    color: $color-gray;
-    line-height: 1.6;
     margin-top: 0;
 
+    color: $color-gray;
+
+    line-height: 1.6;
+
     @include lg-min {
-      font-size: 0.875rem;
       margin-bottom: $gap;
+
+      font-size: 0.875rem;
     }
     @include lg-md {
-      font-size: 0.875rem;
       margin-bottom: $gap-sm;
+
+      font-size: 0.875rem;
     }
     @include md-sm {
-      font-size: 0.8125rem;
       margin-bottom: $gap-sm;
+
+      font-size: 0.8125rem;
     }
     @include sm {
-      font-size: 0.8125rem;
       margin-bottom: $gap-sm;
+
+      font-size: 0.8125rem;
     }
   }
   &__image {
@@ -91,9 +107,10 @@
     }
 
     img {
+      display: block;
+
       width: 100%;
       height: auto;
-      display: block;
     }
   }
 }

@@ -1,15 +1,33 @@
 @use "../../abstracts" as *;
 
 .subscribe__input {
-  flex: 1;
+  width: 100%;
   padding: 0.875em 1.25em;
-  border: 2px solid $color-gray;
-  background-color: $color-primary;
+
+  transition: border-color 0.3s;
+
   color: $color-white;
+  border: 2px solid $color-gray;
+  outline: none;
+  background-color: $color-primary;
+
   font-family: $font-main;
   font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-white, 0.2);
+  }
+
+  @include md-min {
+    &:first-child {
+      grid-column: span 2;
+    }
+  }
+  @include lg-min {
+    &:first-child {
+      grid-column: auto;
+    }
+  }
 
   &::placeholder {
     color: $color-gray2;
@@ -17,39 +35,26 @@
   &:focus {
     border-color: $color-accent;
   }
-
-  @include md-sm {
-    &:first-child {
-      width: 100%;
-      flex: none;
-    }
-  }
-  @include sm {
-    width: 100%;
-  }
 }
 
 .subscribe__btn {
+  width: 100%;
   padding: 0.875em 2em;
-  border: 2px solid $color-accent;
-  background-color: $color-accent;
-  color: $color-white;
-  font-family: $font-main;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
+
   cursor: pointer;
   transition: background-color 0.3s;
   white-space: nowrap;
+  letter-spacing: 0.05em;
+
+  color: $color-white;
+  border: 2px solid $color-white;
+  background-color: rgba($color-white, 0.2);
+
+  font-family: $font-main;
+  font-size: 1rem;
 
   &:hover,
   &:focus {
-    background-color: darken($color-accent, 10%);
-  }
-
-  @include md-min {
-    min-width: 180px;
-  }
-  @include sm {
-    width: 100%;
+    background-color: $color-accent;
   }
 }

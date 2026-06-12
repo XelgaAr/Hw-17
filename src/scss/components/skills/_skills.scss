@@ -10,36 +10,33 @@ $local-height: 200px;
   @include sm {
     padding: $gap;
   }
-  &__title {
-  }
-  &__container {
-    margin-bottom: $gap;
-    grid-auto-rows: minmax($local-height, calc(33.3333333333vh - $Local-gap));
-    display: grid;
-    grid-template-areas:
-      "a1 a1 a2 a3"
-      "a4 a5 a5 a6"
-      "a7 a8 a9 a6";
-    grid-template-columns: repeat(4, 1fr);
 
+  &__container {
+    display: grid;
     gap: $gap-sm;
+
+    margin-bottom: $gap;
+
+    grid-auto-rows: minmax($local-height, calc(33.3333333333vh - $Local-gap));
+    grid-template-areas: "a1 a1 a2 a3"
+    "a4 a5 a5 a6"
+    "a7 a8 a9 a6";
+    grid-template-columns: repeat(4, 1fr);
     @include lg-md {
-      grid-template-areas:
-        "a1 a1 a2 "
-        "a3 a4 a4"
-        "a5 a5 a6"
-        "a7 a8 a6"
-        "a7 a9 a9";
+      grid-template-areas: "a1 a1 a2 "
+      "a3 a4 a4"
+      "a5 a5 a6"
+      "a7 a8 a6"
+      "a7 a9 a9";
       grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
-      grid-template-areas:
-        "a1 a2 "
-        "a3 a2"
-        "a4 a4"
-        "a5 a6"
-        "a5 a7"
-        "a8 a9";
+      grid-template-areas: "a1 a2 "
+      "a3 a2"
+      "a4 a4"
+      "a5 a6"
+      "a5 a7"
+      "a8 a9";
       grid-template-columns: repeat(2, 1fr);
     }
     @include sm-min {
@@ -47,13 +44,15 @@ $local-height: 200px;
     }
     @include sm {
       gap: $gap;
-      grid-template-columns: 1fr;
+
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+      grid-template-columns: 1fr;
     }
   }
   &__actions {
     display: flex;
     justify-content: center;
+
     @include sm-min {
       margin-bottom: $gap-lg;
     }

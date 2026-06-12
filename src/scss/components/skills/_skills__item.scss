@@ -1,15 +1,19 @@
 @use "../../abstracts" as *;
 
 .skills__item {
-  overflow: hidden;
   position: relative;
+
+  overflow: hidden;
   &-title {
     z-index: 1;
+
     margin: 0;
-    @include abs-position;
+
     letter-spacing: 0.1em;
+
     font-family: $font-main;
 
+    @include abs-position;
     @include md-min {
       font-size: 1.25rem;
     }
@@ -18,25 +22,31 @@
     }
   }
   &-link {
-    transform: color 0.3s;
-    padding: $gap;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     height: 100%;
+    padding: $gap;
+
+    transform: color 0.3s;
   }
 
   &-image {
     transition: scale 0.3s;
+
     background-color: $color-primary;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+
     @include abs-position;
   }
   &-overlay {
     transition: opacity 0.3s;
-    background-color: $color-primary;
+
     opacity: 0.85;
+    background-color: $color-primary;
+
     @include abs-position;
   }
   &:hover {
@@ -47,8 +57,9 @@
       color: $color-accent;
     }
     .skills__item-image {
-      scale: 1.1;
       color: $color-accent;
+
+      scale: 1.1;
     }
   }
   @for $i from 1 through 9 {
