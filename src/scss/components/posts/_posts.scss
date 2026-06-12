@@ -3,14 +3,14 @@
   max-width: 1300px;
   margin: 0 auto;
   @include sm-min {
-    padding: $gap-sm;
+    padding: $gap;
   }
   @include sm {
     padding: $gap;
   }
   &__container {
     display: grid;
-    gap: $gap-sm;
+    gap: $gap;
     grid-template-areas:
       "a1 a1 a2 a3"
       "a4 a5 a6 a6";
@@ -31,13 +31,26 @@
       grid-template-columns: repeat(2, 1fr);
     }
     @include sm-min {
-      gap: $gap-sm;
+      // gap: $gap-sm;
     }
     @include sm {
       gap: $gap;
 
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
       grid-template-columns: 1fr;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 101px;
+
+    @include sm-min {
+      margin-bottom: 80px;
+    }
+    @include sm {
+      margin-bottom: 60px;
     }
   }
 }
