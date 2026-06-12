@@ -1,2 +1,21 @@
 @use "../../abstracts" as *;
 @use "sass:color";
+
+.posts__item {
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      grid-area: a#{$i};
+    }
+  }
+  background-color: $color-gray-light2;
+  &-link {
+    color: $color-gray;
+    font-family: $font-header;
+  }
+  &-image {
+    min-height: 300px;
+    background-color: $color-primary;
+    background-position: center;
+    background-size: cover;
+  }
+}
