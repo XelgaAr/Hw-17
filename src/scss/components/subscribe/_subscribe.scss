@@ -1,1 +1,24 @@
 @use "../../abstracts" as *;
+
+.subscribe {
+  background-color: $color-primary;
+  padding: $gap-lg 0;
+
+  &__container {
+    @extend %container;
+  }
+  &__form {
+    display: flex;
+    gap: $gap;
+
+    @include md-min {
+      flex-direction: row;
+    }
+    @include md-sm {
+      flex-wrap: wrap;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+  }
+}

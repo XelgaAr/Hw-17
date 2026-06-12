@@ -1,1 +1,55 @@
 @use "../../abstracts" as *;
+
+.subscribe__input {
+  flex: 1;
+  padding: 0.875em 1.25em;
+  border: 2px solid $color-gray;
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: $font-main;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+
+  &::placeholder {
+    color: $color-gray2;
+  }
+  &:focus {
+    border-color: $color-accent;
+  }
+
+  @include md-sm {
+    &:first-child {
+      width: 100%;
+      flex: none;
+    }
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+
+.subscribe__btn {
+  padding: 0.875em 2em;
+  border: 2px solid $color-accent;
+  background-color: $color-accent;
+  color: $color-white;
+  font-family: $font-main;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-accent, 10%);
+  }
+
+  @include md-min {
+    min-width: 180px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}

@@ -1,1 +1,99 @@
 @use "../../abstracts" as *;
+
+.about {
+  background-color: $color-gray-light2;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: flex-start;
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x2;
+
+    @include md {
+      flex-wrap: wrap;
+    }
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__content {
+    flex: 1;
+    min-width: 0;
+    @include sm-min {
+      padding-right: $gap-x2;
+    }
+  }
+  &__title {
+    color: $color-primary;
+    font-family: $font-header;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+
+    @include lg-min {
+      font-size: 2.25rem;
+      margin-bottom: $gap-lg;
+    }
+    @include lg-md {
+      font-size: 2rem;
+      margin-bottom: $gap;
+    }
+    @include md-sm {
+      font-size: 1.75rem;
+      margin-bottom: $gap;
+    }
+    @include sm {
+      font-size: 1.75rem;
+      margin-bottom: $gap;
+      text-align: center;
+    }
+  }
+  &__text {
+    color: $color-gray;
+    line-height: 1.6;
+    margin-top: 0;
+
+    @include lg-min {
+      font-size: 0.875rem;
+      margin-bottom: $gap;
+    }
+    @include lg-md {
+      font-size: 0.875rem;
+      margin-bottom: $gap-sm;
+    }
+    @include md-sm {
+      font-size: 0.8125rem;
+      margin-bottom: $gap-sm;
+    }
+    @include sm {
+      font-size: 0.8125rem;
+      margin-bottom: $gap-sm;
+    }
+  }
+  &__image {
+    flex-shrink: 0;
+
+    @include lg-min {
+      width: 300px;
+    }
+    @include lg-md {
+      width: 250px;
+    }
+    @include md-sm {
+      width: 200px;
+      margin-left: -$gap-x2;
+    }
+    @include sm {
+      width: 250px;
+      margin-top: $gap;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
