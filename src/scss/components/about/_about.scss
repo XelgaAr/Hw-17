@@ -25,7 +25,7 @@
     min-width: 0;
 
     @include sm-min {
-      padding-right: $gap-x2;
+      padding-right: 90px;
     }
   }
   &__title {
@@ -89,6 +89,19 @@
     }
   }
   &__image {
+    position: relative;
+
+    &::before {
+      content: "";
+      left: -42px;
+      top: 22%;
+      position: absolute;
+      width: 1px;
+      height: 200px;
+      background-color: $color-gray;
+      z-index: 1;
+      display: block;
+    }
     flex-shrink: 0;
 
     @include lg-min {

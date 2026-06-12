@@ -481,6 +481,20 @@ a{
   line-height:1.6;
 }
 .about__image{
+  position:relative;
+}
+.about__image::before{
+  content:"";
+  left:-42px;
+  top:22%;
+  position:absolute;
+  width:1px;
+  height:200px;
+  background-color:#637588;
+  z-index:1;
+  display:block;
+}
+.about__image{
   -ms-flex-negative:0;
       flex-shrink:0;
 }
@@ -586,7 +600,7 @@ a{
     margin-bottom:30px;
   }
   .about__content{
-    padding-right:40px;
+    padding-right:90px;
   }
 }
 @media (768px <= width < 992px){
