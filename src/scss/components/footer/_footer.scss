@@ -2,41 +2,52 @@
 .footer {
   background-color: $color-primary;
   &__container {
-    min-height: 250px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+
+    min-height: 250px;
   }
   &__text {
-    margin-bottom: 2px;
-    margin-top: 143px;
     position: relative;
-    color: #637588;
+
+    margin-top: 143px;
+    margin-bottom: 2px;
+
     text-align: center;
+    letter-spacing: 4.784px;
+
+    color: #637588;
+
     font-family: Roboto;
     font-size: 16px;
-    font-style: normal;
     font-weight: 100;
+    font-style: normal;
     line-height: 20px; /* 125% */
-    letter-spacing: 4.784px;
     &::before {
-      content: "";
-      background-color: $color-white;
+      position: absolute;
+      top: -30px;
+      left: 30px;
+
       display: block;
+
       width: 75px;
       height: 2px;
-      top: -30px;
-      position: absolute;
-      left: 30px;
+
+      content: "";
+
+      background-color: $color-white;
     }
   }
   &__text-accent {
-    color: #fff;
+    letter-spacing: 0.8px;
+
+    color: #ffffff;
+
     font-family: Roboto;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
+    font-style: normal;
     line-height: 20px;
-    letter-spacing: 0.8px;
   }
 }

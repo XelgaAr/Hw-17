@@ -13,10 +13,6 @@
 
   font-family: $font-main;
   font-size: 1rem;
-  &:hover,
-  &:focus {
-    background-color: rgba($color-white, 0.2);
-  }
 
   @include md-min {
     &:first-child {
@@ -27,6 +23,10 @@
     &:first-child {
       grid-column: auto;
     }
+  }
+  &:hover,
+  &:focus {
+    background-color: rgba($color-white, 0.2);
   }
 
   &::placeholder {

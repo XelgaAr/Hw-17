@@ -91,17 +91,6 @@
   &__image {
     position: relative;
 
-    &::before {
-      content: "";
-      left: -42px;
-      top: 22%;
-      position: absolute;
-      width: 1px;
-      height: 200px;
-      background-color: $color-gray;
-      z-index: 1;
-      display: block;
-    }
     flex-shrink: 0;
 
     @include lg-min {
@@ -117,6 +106,22 @@
     @include sm {
       width: 250px;
       margin-top: $gap;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 22%;
+      left: -42px;
+
+      display: block;
+
+      width: 1px;
+      height: 200px;
+
+      content: "";
+
+      background-color: $color-gray;
     }
 
     img {

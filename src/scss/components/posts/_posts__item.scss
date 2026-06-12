@@ -3,7 +3,9 @@
 
 .posts__item {
   overflow: hidden;
+
   min-height: 550px;
+
   background-color: $color-gray-light2;
 
   &:hover {
@@ -22,34 +24,40 @@
   }
 
   &-link {
+    letter-spacing: 0.9px;
+
     color: $color-gray;
+
     font-family: $font-header;
     font-size: 18px;
     font-weight: 700;
     line-height: 20px; /* 111.111% */
-    letter-spacing: 0.9px;
   }
   &-image {
-    transition: scale 0.3s;
     min-height: 300px;
+
+    transition: scale 0.3s;
+
     background-color: $color-primary;
     background-position: center;
     background-size: cover;
   }
   &-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
     min-height: 250px;
     padding: 0 $gap;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
     text-align: center;
   }
   &-text {
     font-family: Roboto;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
+    font-style: normal;
     line-height: 20px;
   }
 }
